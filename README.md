@@ -93,7 +93,7 @@ When you will add a new Rinkeyby Test Network in your Metamask client, you will 
 
 | Network Name | New RPC URL | Chain ID |
 |---|---|---|
-|Private Network 1|`http://127.0.0.1:9545/`|1337 |
+|Private Network 1|`http://127.0.0.1:8545/`|1337 |
 
 The chain ID above can be fetched by:
 ```bash
