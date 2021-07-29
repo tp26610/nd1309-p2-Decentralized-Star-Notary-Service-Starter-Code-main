@@ -134,3 +134,16 @@ it('lookUptokenIdToStarInfo test', async() => {
     // 3. Verify if you Star name is the same
     assert.equal('awesome star', starName);
 });
+
+it('lookUptokenIdToStarInfo for a star not existing', async () => {
+  // 1. create a Star with different tokenId
+  let instance = await StarNotary.deployed();
+
+  // 2. Call your method lookUptokenIdToStarInfo
+  try {
+    await instance.lookUptokenIdToStarInfo(123);
+    assert.fail("lookUptokenIdToStarInfo sholud throw an error");
+  } catch (err) {
+    assert.equal(true, err.message.includes('The star is not existing'));
+  }
+});

@@ -56,8 +56,11 @@ contract StarNotary is ERC721Metadata("Brian", "BRN") {
 
     // Implement Task 1 lookUptokenIdToStarInfo
     function lookUptokenIdToStarInfo (uint _tokenId) public view returns (string memory) {
+        Star memory starInfo = tokenIdToStarInfo[_tokenId];
+        require(bytes(starInfo.name).length > 0, "The star is not existing");
+
         //1. You should return the Star saved in tokenIdToStarInfo mapping
-        return tokenIdToStarInfo[_tokenId].name;
+        return starInfo.name;
     }
 
     // Implement Task 1 Exchange Stars function
