@@ -18,6 +18,7 @@ yarn-error.log*
 
 node_modules/
 
-truffle-develop-info.txt
 .secret
 .secret.json
+
+dev-info.md
