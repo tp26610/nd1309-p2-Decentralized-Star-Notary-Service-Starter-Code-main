@@ -20,3 +20,4 @@ node_modules/
 
 truffle-develop-info.txt
 .secret
+.secret.json
